@@ -1,0 +1,4 @@
+ReviewForge AI dry-run verification fixture.
+This text file is intentionally harmless and belongs only to the sandbox pull request.
+The same PR also contains a separate intentionally vulnerable JavaScript example for review.
+Do not merge this experimental PR into main.
