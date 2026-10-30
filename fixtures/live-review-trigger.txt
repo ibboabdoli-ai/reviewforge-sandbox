@@ -1,0 +1,3 @@
+# ReviewForge live review smoke test
+This is a harmless text-only fixture. The same pull request contains intentionally vulnerable example JavaScript code for the reviewer to detect.
+Do not merge this sandbox PR.
