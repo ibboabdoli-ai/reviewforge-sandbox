@@ -9,4 +9,5 @@ test("adjacent half-open ranges do not overlap", () => {
 test("duration and invalid empty ranges", () => {
   assert.equal(duration({start:-5,end:5}), 10);
   assert.throws(() => duration({start:5,end:5}), RangeError);
+  assert.throws(() => duration({start:-Number.MAX_SAFE_INTEGER,end:Number.MAX_SAFE_INTEGER}), RangeError);
 });
