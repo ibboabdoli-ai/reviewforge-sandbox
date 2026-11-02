@@ -3,7 +3,7 @@ export function safeEmailLink(address) {
   if (typeof address !== "string") return null;
   const trimmed = address.trim();
   if (trimmed.length > 180 || /[\r\n]/.test(trimmed) ||
-      !/^[a-z0-9._%+'-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(trimmed)) {
+      !/^[a-z0-9._%+'-]+@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,63}$/i.test(trimmed)) {
     return null;
   }
   const [local, domain] = trimmed.split("@");
