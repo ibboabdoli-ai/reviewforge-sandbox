@@ -12,5 +12,7 @@ test("valid apostrophe in email local part is preserved", () => {
 test("header injection and executable phone values are rejected", () => {
   assert.equal(safeEmailLink("a@example.se?bcc=evil@example.se"), null);
   assert.equal(safeEmailLink("a\n@example.se"), null);
+  assert.equal(safeEmailLink("a@..example.se"), null);
+  assert.equal(safeEmailLink("a@-example.se"), null);
   assert.equal(safePhoneLink("javascript:alert(1)"), null);
 });
