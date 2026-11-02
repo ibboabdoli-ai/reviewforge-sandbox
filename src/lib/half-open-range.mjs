@@ -12,5 +12,7 @@ export function overlapsHalfOpen(left, right) {
 }
 export function duration(range) {
   assertRange(range);
-  return range.end - range.start;
+  const result = range.end - range.start;
+  if (!Number.isSafeInteger(result)) throw new RangeError("Duration exceeds safe integer range");
+  return result;
 }
